@@ -1,39 +1,16 @@
-# Binaries
-ascii-player
-*.exe
-*.out
-
-# Object files
+# object files
+obj/
 *.o
-*.obj
-src/*.o
-src/bmp/*.o
-src/video/*.o
-src/ascii/*.o
 
-# IDE
-.vscode/
-*.swp
-*.swo
+# binaries
+main
 
-# OS
-.DS_Store
-Thumbs.db
+# temporary/output files
+out/
 
-# Media files (CRITICAL - never commit these)
-*.bmp
+# media
 *.mp4
-*.avi
-*.mov
-*.jpg
-*.png
+*.bmp
 
-# Examples directory content (except README and scripts)
-examples/input/*
-!examples/input/README.md
-examples/output/*
-!examples/output/README.md
-
-# Backup files
-backup/
-*.bak
+# editor folders
+.vscode/
