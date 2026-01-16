@@ -17,7 +17,7 @@ int main(int argc,char** argv){
 
 void help(){
     const char* message = 
-        "Usage:\n"
+        "Usage :\n"
         "main [filename]\n"
     ;
     printf(message);
