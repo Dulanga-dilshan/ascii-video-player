@@ -1,0 +1,31 @@
+0–1	Signature	Must be "BM" (0x42 0x4D in hex)
+2–5	File size	Size of entire file in bytes
+6–9	Reserved	Usually 0
+10–13	Pixel data offset	Where the pixel array starts (important!)
+14–17	Header size	Should be 40 (for BITMAPINFOHEADER)
+18–21	Width	Image width in pixels
+22–25	Height	Image height in pixels (positive = stored bottom→top, negative = top→bottom)
+26–27	Planes	Always 1
+28–29	Bits per pixel	Common: 24 (BGR), 32 (BGRA)
+30–33	Compression	0 = none (uncompressed BMP)
+34–37	Image data size	Size of raw pixel array (may be 0 for uncompressed BMP)
+38–45	Resolution	Pixels per meter (ignore if not needed)
+46–53	Color table info	Only used for indexed color BMPs (≤8 bpp)
+
+Each row is padded to a multiple of 4 bytes.
+Pixels are always B, G, R order
+
+Weighted luminance
+gray = 0.299 * R + 0.587 * G + 0.114 * B
+
+
+terminal
+Small (fast): 320×160
+Medium (better quality): 460×230
+Large (heavy but sharp): 640×320
+max : 1880 960
+
+ffmpeg out: 1500 X 700
+ffmpeg -i video.mp4 -vf fps=1,scale=1300:700,format=bgr24 frames/frame_%d.bmp
+
+clear - printf("\033[2J\033[H");
