@@ -41,7 +41,7 @@ A terminal-based ASCII video player written in C that streams video frames via f
 ## Example Usage
 
 # Make sure you have ffmpeg installed and a terminal-compatible video
-./main input.mp4
+# ./main input.mp4
 
-# Internally, frames are streamed using ffmpeg via a pipe:
-# ffmpeg -i input.mp4 -f rawvideo -pix_fmt gray -
+ Internally, frames are streamed using ffmpeg via a pipe:
+ ffmpeg -i input.mp4 -f rawvideo -pix_fmt gray -
