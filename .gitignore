@@ -1,55 +1,39 @@
-# Prerequisites
-*.d
+# Binaries
+ascii-player
+*.exe
+*.out
 
 # Object files
 *.o
-*.ko
 *.obj
-*.elf
+src/*.o
+src/bmp/*.o
+src/video/*.o
+src/ascii/*.o
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# IDE
+.vscode/
+*.swp
+*.swo
 
-# Precompiled Headers
-*.gch
-*.pch
+# OS
+.DS_Store
+Thumbs.db
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Media files (CRITICAL - never commit these)
+*.bmp
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.png
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Examples directory content (except README and scripts)
+examples/input/*
+!examples/input/README.md
+examples/output/*
+!examples/output/README.md
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
+# Backup files
+backup/
+*.bak
